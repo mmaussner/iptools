@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-INTERFACE="p1p1"
+INTERFACE="eth0"
 IP=`/sbin/ifconfig $INTERFACE |/bin/grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"|/usr/bin/head -n1`
 MAC=`cat /sys/class/net/$INTERFACE/address`
 HOST=`hostname -f`
